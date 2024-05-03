@@ -87,7 +87,8 @@ struct ContentView: View {
                             Image(systemName: listOfMoves[number].getImage())
                                 .resizable()
                                 .frame(width: 50, height: 40)
-//                            Image(listOfMoves[number].getImage())
+                            Text(listOfMoves[number].getName())
+                                .font(.title2.bold())
                         }
                         
                     }
