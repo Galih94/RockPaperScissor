@@ -30,11 +30,11 @@ enum Move {
     func getImage() -> String {
         switch self {
         case .paper:
-            return "newspaper"
+            return "📄"
         case .rock:
-            return "mountain.2.fill"
+            return "🪨"
         case .scissor:
-            return "scissors"
+            return "✂️"
         }
     }
     
@@ -84,11 +84,8 @@ struct ContentView: View {
                         Button {
                             chooseMove(number)
                         } label: {
-                            Image(systemName: listOfMoves[number].getImage())
-                                .resizable()
-                                .frame(width: 50, height: 40)
-                            Text(listOfMoves[number].getName())
-                                .font(.title2.bold())
+                            Text("\(listOfMoves[number].getImage()) \(listOfMoves[number].getName())")
+                                .font(.title.bold())
                         }
                         
                     }
